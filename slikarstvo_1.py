@@ -1,4 +1,3 @@
-import csv
 import re
 from utils import *
 
@@ -49,7 +48,7 @@ def prenesi_podatke():
             continue
         for ujemanje in re.finditer(regex_slikarja,vsebina_datoteke(html_datoteka)):
             url_3='http://www.wga.hu/html/{0}/{1}'.format(html_datoteka[17],ujemanje.group('Stran'))
-            ime_datoteke='podatki/slikarji/seznam/{}.html'.format(ujemanje.group('Ime'))
+            ime_datoteke='podatki/seznam_slikarjev/{}.html'.format(ujemanje.group('Ime'))
             shrani(url_3,ime_datoteke)
 
 def vpisi_podatke():
@@ -60,6 +59,7 @@ def vpisi_podatke():
         r'<TD CLASS="ARTISTLIST">(?P<Obdobje>.*)</TD>'
         r'<TD CLASS="ARTISTLIST">(?P<Narodnost>\w+)\s+(?P<Smer>\w+)\s+(?P<Kraj>.*)</TD>'#Napaka v regularnem izrazu!
     )
+    """
     #Vpišemo podatke o slikarjih v csv datoteke.
     for html_datoteka in datoteke('podatki/slikarji/'):
         if html_datoteka[-4:] == '.csv':
@@ -71,7 +71,17 @@ def vpisi_podatke():
             writer.writeheader()
             for ujemanje in re.finditer(regex_slikarja,vsebina_datoteke(html_datoteka)):
                 writer.writerow(ujemanje.groupdict())
+    """         
+    slikarji = {}
     
+    for html_datoteka in datoteke('podatki/slikarji/'):
+        for slikar in re.finditer(regex_slikarja,vsebina_datoteke(html_datoteka)):
+            podatki = slikar.groupdict()
+            slikarji[podatki['Ime']] = podatki
+            
+    zapisi_tabelo(slikarji.values(), ['Ime','Leto','Obdobje','Narodnost','Smer','Kraj'],
+                         'csv-datoteke/slikarji.csv')
+    """   
     #Združimo csv datoteke.
     with open('podatki/vse.csv','a',encoding='utf-8') as fout:
         with open('podatki/slikarji/a.csv',encoding='utf-8') as prva:
@@ -88,6 +98,6 @@ def vpisi_podatke():
                     fout.write(line)
             f.close()
     fout.close()
-    
+    """
 prenesi_podatke()
 vpisi_podatke()
