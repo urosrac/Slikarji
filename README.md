@@ -6,14 +6,14 @@ Projektna naloga pri predmetu programiranje 1.
 S spletne strani http://www.wga.hu/ bom zajel podatke o evropskih slikarjih od 11stol. do 19stol.
 Za vsakega slikarja:
 
-*Ime slikarja
-*Letnice
-*Obdobje
-*Narodnost
-*Smer (razen slikarjev so še drugi umetniki) arhitekti, kiparji,...
-*Kraj delovanja
+* Ime slikarja
+* Letnice
+* Obdobje
+* Narodnost
+* Smer (razen slikarjev so še drugi umetniki) arhitekti, kiparji,...
+* Kraj delovanja
 
 ##Predvidena analiza
 
-*Število slikarjev v nekem obdobju glede na narodnost.
-*?
+* Število slikarjev v nekem obdobju glede na narodnost.
+* ?
