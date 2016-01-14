@@ -98,6 +98,21 @@ def vpisi_podatke():
                     fout.write(line)
             f.close()
     fout.close()
-    """
-prenesi_podatke()
+    """ 
+    
+    regex_slikarja_seznam=re.compile(
+        r"""</script><div CLASS="STYLE1">(?P<Ime_slikarja>.*)</div>
+<div CLASS="STYLE2">(?P<Narodnost>.*)\s+(?P<Smer>.*)\s+\((?P<Letnice_kraj>.*)\)</div>"""
+    )
+    slikarji_2 = {}
+    #Obdobje, Smer = {},{}
+    for html_datoteka in datoteke('podatki/seznam_slikarjev/'):
+        for slikar in re.finditer(regex_slikarja_seznam,vsebina_datoteke(html_datoteka)):
+            podatki = slikar.groupdict()
+            slikarji_2[podatki['Ime_slikarja']] = podatki
+            
+    zapisi_tabelo(slikarji_2.values(), ['Ime_slikarja','Narodnost','Smer','Letnice_kraj'],
+                         'csv-datoteke/slikarji_seznam.csv')
+
+#prenesi_podatke()
 vpisi_podatke()
