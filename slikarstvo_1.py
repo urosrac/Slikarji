@@ -57,7 +57,7 @@ def vpisi_podatke():
         r'<B>(?P<Ime>.*)</B>'
         r'</A></TD><TD CLASS="ARTISTLIST">(?P<Leto>.*)</TD>'
         r'<TD CLASS="ARTISTLIST">(?P<Obdobje>.*)</TD>'
-        r'<TD CLASS="ARTISTLIST">(?P<Narodnost>\w+)\s+(?P<Smer>\w+)\s+(?P<Kraj>.*)</TD>'#Napaka v regularnem izrazu!
+        r'<TD CLASS="ARTISTLIST">(?P<Narodnost>\w+)\s+(?P<Smer>\w+)\s+(\((?P<Kraj>.*)\))?</TD>'
     )
     """
     #Vpišemo podatke o slikarjih v csv datoteke.

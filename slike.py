@@ -1,5 +1,6 @@
 import urllib.request
 import re
+import shutil
 from utils import *
 
 #d=urllib.request.urlretrieve('http://www.wga.hu/art/a/aagaard/deerlake.jpg', 'deerlake.jpg')
@@ -21,6 +22,10 @@ def shrani_sliko(url, ime_slike, vsili_prenos=False): #Popravi!
     pripravi_imenik(ime_slike)
     urllib.request.urlretrieve(url,ime_slike)
     print('shranjeno!')
+    
+if os.path.exists('podatki/seznam_slik/') and datoteke('podatki/seznam_slik/') != []:
+    zadnja = datoteke('podatki/seznam_slik/')[-1]
+    shutil.rmtree(zadnja)
 
 for html_datoteka in datoteke('podatki/seznam_slikarjev/'):
     for slika in re.finditer(regex_slike,vsebina_datoteke(html_datoteka)):
