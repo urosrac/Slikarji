@@ -7,13 +7,15 @@ S spletne strani http://www.wga.hu/ bom zajel podatke o evropskih slikarjih od 1
 Za vsakega slikarja:
 
 * Ime slikarja
-* Letnice
 * Obdobje
 * Narodnost
 * Smer (razen slikarjev so še drugi umetniki) arhitekti, kiparji,...
 * Kraj delovanja
+* Podatki o slikah?
+
 
 ##Predvidena analiza
 
 * Število slikarjev v nekem obdobju glede na narodnost.
+* Prevladujoča tehnika slikanja v nekem obdobju.
 * ?
