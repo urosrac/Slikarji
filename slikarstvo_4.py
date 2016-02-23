@@ -4,7 +4,7 @@ from utils import *
 import csv
 import os
 import urllib.request
-import shutil
+#import shutil
 
 #Prvi del.
 def prenesi_podatke():
@@ -111,9 +111,9 @@ def preberi_katalog(ime_datoteke):
 
 def prenesi_slike(ime_csv):
     
-    if os.path.exists('podatki/seznam_slik/') and datoteke('podatki/seznam_slik/') != []:
-        zadnja = datoteke('podatki/seznam_slik/')[-1]
-        shutil.rmtree(zadnja)
+    #if os.path.exists('podatki/seznam_slik/') and datoteke('podatki/seznam_slik/') != []:
+    #    zadnja = datoteke('podatki/seznam_slik/')[-1]
+    #    shutil.rmtree(zadnja)
     
     link=[]
     with open(ime_csv,'r') as csv_dat:
@@ -130,7 +130,7 @@ def prenesi_slike(ime_csv):
 #prenesi_podatke()
 #vpisi_podatke()
 
-#prenesi_katalog()
-#preberi_katalog('podatki/katalog/catalog.csv')
+prenesi_katalog()
+preberi_katalog('podatki/katalog/catalog.csv')
 
 prenesi_slike('csv-datoteke/seznam_linkov.csv')
