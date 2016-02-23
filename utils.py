@@ -61,5 +61,5 @@ def shrani_sliko(url, ime_slike, vsili_prenos=False):
     urllib.request.urlretrieve(url,ime_slike)
     print('shranjeno!')
 
-def filtriraj(imenik,koncnica):
-    return list(filter(lambda s: s.endswith(koncnica),datoteke(imenik)))
+#def filtriraj(imenik,koncnica):
+#    return list(filter(lambda s: s.endswith(koncnica),datoteke(imenik)))
