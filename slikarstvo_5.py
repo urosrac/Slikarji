@@ -135,4 +135,4 @@ def prenesi_slike(ime_csv):
 prenesi_katalog()
 preberi_katalog('podatki/katalog/catalog.csv')
 
-#prenesi_slike('csv-datoteke/seznam_linkov.csv')
+prenesi_slike('csv-datoteke/seznam_linkov.csv')
