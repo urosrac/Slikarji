@@ -1,4 +1,4 @@
-# Slikarji
+# Umetniki
 Projektna naloga pri predmetu programiranje 1.
 
 ##Zajeti podatki
@@ -10,7 +10,7 @@ Za vsakega umetnika:
 * Obdobje
 * Narodnost
 
-In podatke o umetninah za vsako:
+In podatke o umetniških delih za vsako:
 
 * Naslov
 * Tehnika
@@ -23,7 +23,7 @@ In podatke o umetninah za vsako:
 
 * Število umetnikov glede na narodnost in obdobje.
 * Število umetniških del glede na obliko in tip.
-* Največje zbirke umetnin.
+* Največje zbirke umetniških del.
 * Najbolj ustvarjalni umetniki.
 * Najbolj pogoste oblike umetniškega ustvarjanja.
 * Iskalnik in prikazovalnik umetniških del.
