@@ -1,4 +1,4 @@
-import re
+#import re
 import zipfile
 from utils import *
 import csv
@@ -6,6 +6,7 @@ import os
 import urllib.request
 #import shutil
 
+"""
 #Prvi del.
 def prenesi_podatke():
     #Shrani index strani.
@@ -74,6 +75,7 @@ def vpisi_podatke():
             
     zapisi_tabelo(slikarji.values(), ['Id','Ime','Obdobje','Narodnost','Smer','Kraj'],
                          'csv-datoteke/slikarji_prebrano.csv')
+"""
 #Drugi del.        
 def prenesi_katalog():
     
