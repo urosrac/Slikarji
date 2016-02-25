@@ -26,8 +26,6 @@ In podatke o umetninah za vsako:
 * Največje zbirke umetnin.
 * Najbolj ustvarjalni umetniki.
 * Najbolj pogoste oblike umetniškega ustvarjanja.
-
 * Iskalnik in prikazovalnik umetniških del.
 * Iskalnik umetnikov in njihovih del, ter prikazovalnik.
-
 * Ostale analize podatkov.
