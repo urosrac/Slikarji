@@ -30,4 +30,4 @@ In podatke o umetninah za vsako:
 * Iskalnik in prikazovalnik umetniških del.
 * Iskalnik umetnikov in njihovih del, ter prikazovalnik.
 
-*Ostale analize podatkov.
+* Ostale analize podatkov.
